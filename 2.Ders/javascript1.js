@@ -194,7 +194,7 @@
 // let text = `mustafa 
 // selman's 
 // "house"`
-// //multiline string
+ //multiline string
 
 // console.log(text)
 
