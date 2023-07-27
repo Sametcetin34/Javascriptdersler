@@ -176,12 +176,12 @@
 // function myDisplayer(some){
 //     console.log(some);
 // }
-// function myCalculater(mum1,mum2,myCallback){
-// let sum=mum1+mum2;
-// myCallback(sum);
-// }
+function myCalculater(mum1,mum2,myCallback = () => {}){
+let sum=mum1+mum2;
+myCallback(sum);
+}
 
-// myCalculater(2,3,myDisplayer);
+myCalculater(2,3,myDisplayer);
 
 //!settime,setinterval
 
