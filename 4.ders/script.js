@@ -106,7 +106,7 @@ console.log(name5 ?? text);
 console.log(name6 ?? text);
 console.log("----------");
 
-// ?? den farkı 0 " veya NaN gelirse ikinci değeri yazar"
+// ?? den farkı 0 "" veya NaN gelirse ikinci değeri yazar"
 console.log(name  || text);
 console.log(name2 || text);
 console.log(name3 || text);

@@ -1,4 +1,4 @@
-//!json(Javascript object notation)
+//!-----------json(Javascript object notation)------------------
 
 // let text='{"FirstName":"Ahmet"}'
 // console.log(typeof text);
@@ -19,7 +19,7 @@
 //?stringfy ifadesi json objesine dönüştürür,tipi string olsada dönüşümü jsona özgüdür. Parse komutu ise jason formatını normal objeye dönüştürür.
 
 
-//!object details
+//!----------------object details------------------------------
 
 // const person={
 //     firstName:"Mustafa",
@@ -44,7 +44,7 @@
 // console.log(person);
 
 
-//!Function Details
+//!-------------------Function Details---------------------------
 
 // function myFunction(x,y) {
 //     console.log(y)
@@ -58,10 +58,12 @@
 // function myFunction(x=3, y=2){
 //     return x+y
 // }
-// console.log(myFunction(4,7))
+// console.log(myFunction(4,7));
+// console.log(myFunction(4));
+// console.log(myFunction());
 
 // function sum(...args) {
-//     console.log(args)
+//     console.log(args);
 //     let sum = 0;
 //     for (let arg of args) {
 //         sum += arg
@@ -69,19 +71,20 @@
 //     return sum;
 // }
 // let x = sum(1,2,3,4,5)
-// console.log(x)
+// console.log(x);
+
 
 // function self1(){
 //     console.log("self1 work")
 // }
-// // self1()
-// (function self2(){
-//     console.log("self2 work")
-// })();
-// //self-invoke
+// self1();
+
+// (function self2(){ console.log("self2 work") })();  
+
+//TODO: Direk çağırıyor fonksiyonu-(self-invoke)
 
 
-//!class detail
+//! -------------class detail-----------------------------
 
 // class Car{
 
@@ -95,10 +98,14 @@
 //         return "static hello"
 //     }
 // }
+
 // let myCar=new Car("Ford");
 
+// console.log(myCar);
 // console.log(myCar.hello());
 // console.log(Car.hello2());
+
+
 
 // class Person{
 //     constructor(name,age){
@@ -129,12 +136,12 @@
 // console.log(emp);
 // console.log(per);
 
-// emp.prototype.showInfos();
+
 // emp.raiseSalary(500)
 // emp.showInfos();
 
 
-//! js callbacks
+//! ----------------js callbacks----------------------------
 
 // function myDisplayer(message){
 //     console.log(message);
@@ -161,6 +168,7 @@
 // }
 // myCalculater(5,4);
 
+
 // function myDisplayer(some){
 // console.log(some);
 // }
@@ -173,39 +181,42 @@
 // let result=myCalculater(3,4);
 // myDisplayer(result);
 
+
 // function myDisplayer(some){
 //     console.log(some);
 // }
-function myCalculater(mum1,mum2,myCallback = () => {}){
-let sum=mum1+mum2;
-myCallback(sum);
-}
+// function myCalculater(mum1,mum2,myCallback = () => {}){
+// let sum=mum1+mum2;
+// console.log("Calculater fonksiyonu çalıştı")
+// myCallback(sum);
+// }
 
-myCalculater(2,3,myDisplayer);
+// myCalculater(2,3);
 
-//!settime,setinterval
+//!---------settime,setinterval-----------------
 
-function myFunction(){
-    console.log("Function running..")
-}
+// function myFunction(){
+//     console.log("Function running..")
+// }
 // setTimeout(myFunction, 3000);
  
 //? 3 saniye sonra fonksiyonu çalıştırır.
 
-setInterval(myFunction,3000);  
+// setInterval(myFunction,3000);  
 
 //? 3 saniye aralıklarla fonksiyonu çalıştırır.
 
-//!Promise objesi
+//!-------------Promise objesi-------------------
 
 // let myPromise=new Promise(function(myResolve,myReject){
-//     myResolve(); //?başarılı olduğunda 
-//     myReject(); //? Başarısız olduğunda
+//     myResolve();    //?başarılı olduğunda 
+//     myReject();     //? Başarısız olduğunda
 // })
 // myPromise.then(
 //     function(value){ kod başarılı olduğunda},
 //     function(error){kod başarısız olduğunda}
 // )
+
 
 function myDisplayer(some){
     console.log(some)
@@ -220,29 +231,32 @@ function myDisplayer(some){
 //     }
 // })
 
-let myPromise=new Promise(function(){
+// myPromise.then(
+//     function(value){ myDisplayer(value)}, 
+
+//     function(error){ myDisplayer(error)}
+//               )
+
+// myPromise.then(function(value){myDisplayer(value)})
+// .catch(function(error){myDisplayer(error)})
+// .finally(console.log("İşlem tamamlandı."))
+
+
+
+
+
+
+function myPromise(){
     let x=3;
     if(x==0){
         return Promise.resolve("ok")}
         else {
-        return Promise.reject("error")
-    }
-})
+        return Promise.reject("error")}
+    
+}
 
 
-
-
-
-
-
-// myPromise.then(function(value){
-//     myDisplayer(value)
-// }, function(error){
-//     myDisplayer(error)
-// })
-
-
-myPromise.then(function(value){
+myPromise().then(function(value){
     myDisplayer(value);
 })
 .catch(function(error){ myDisplayer(error)})

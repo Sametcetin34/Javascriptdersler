@@ -2,7 +2,7 @@
 //     console.log(`i değeri:${i} döngü çalıştı`)
 // }
 
-//ilk kısım hakkında
+//!ilk kısım hakkında
 
 // let i = 0
 // for(; i < 5;i++){
@@ -14,7 +14,7 @@
 // let len = cars.length ;
 // let text = "";
 // for (; i < len ; i++){
-//     // text = text + cars[i] + "\n"
+//      text = text + cars[i] + "\n"
 //     text += cars[i] + "\r\n"
 // }
 // console.log(text)
@@ -43,7 +43,7 @@
 // }
 
 // const number = ["45","4","9","40"]
-// // console.log(typeof null)
+//  console.log(typeof null)
 // let text = 0
 // number.forEach(myFunction)
 
@@ -69,7 +69,7 @@
 //     console.log(x)
 // }
 
-// //while
+// ?  while
 // let i = 0;
 // while( i < 10) {
 //     console.log(i)
@@ -80,7 +80,7 @@
 //     console.log(i)
 // }
 
-//do-while
+//?do-while
 
 // let i = 50 ;
 // do {
@@ -99,11 +99,11 @@
 //     console.log(i)
 // }
 
-//js errors
+//!js errors
 
 // console.log(mesajımız)
 // try {
-//     console.log("mesajımız")
+//     console.log(mesajımız)
 // }
 // catch(err){
 //     console.log(err.message)
@@ -145,10 +145,10 @@
 //     console.log("work is done")
 // }
 
-//this kullanımı
+//!this kullanımı
 
 // console.log(this)
-// Window.alert("bu bir uyarıdır")
+// alert("bu bir uyarıdır");
 
 // const person = {
 //     name: "musa",
@@ -158,7 +158,7 @@
 // }
 // console.log(person.description())
 
-//constructor fonksiyonlar
+//!constructor fonksiyonlar
 
 // const person = {
 //     name: "musa",
@@ -175,7 +175,7 @@
 //     this.age = age;
 //     this.eyeColor = eye;
 //     this.showInfos = function(){
-//         console.log(this.firstName," ",this.lastName," ",this.age)
+//         console.log(this.firstName," ",this.lastName," ",this.age," ",this.eyeColor)
 //     }
 // }
 // const myFather = new Person("John","Day",50,"blue")
@@ -213,10 +213,10 @@
 // console.log(myFather)
 // new Person()
 
-//es6 arrow func
+//! ---es6 arrow func-----
 
 // function myFunction(value){
-//     // console.log(value)
+//     console.log(value)
 //     return 34 + value
 // }
 // let deger = myFunction(12)
@@ -238,10 +238,10 @@
 
 
 // let myFunction = () => "Hello World"
-// console.log(myFunction())
+// console.log(myFunction());
 
 // let hello = value => "Hello World" + value;
-// console.log(hello(" and Turkey"))
+// console.log(hello(" and Turkey"));
 
 const person1 = {
     firstName: "ahmet",
@@ -258,7 +258,9 @@ const person2 = {
 }
 console.log(person2.description())
 console.log(this)
-//arrow fonksiyonu içindeki this kendi kapsamını değil global kapsamı gösterir.
+
+
+//?arrow fonksiyonu içindeki this kendi kapsamını değil global kapsamı gösterir.
 
 
 
